@@ -1,5 +1,3 @@
-
-
 server:
   port: 8001
 
@@ -17,12 +15,11 @@ spring:
       ddl-auto: create
     properties:
       hibernate:
-#        show_sql: true
-        format_sql: true
+        show_sql: true  # SQL 로그 출력
+        format_sql: true # SQL 포맷팅
+        dialect: org.hibernate.dialect.H2Dialect # H2 방언 추가
+
 logging:
   level:
     org.hibernate.sql: debug
     org.hibernate.type: trace
-
-
-
