@@ -37,4 +37,4 @@ out/
 .vscode/
 
 # Ignore test files
-/src/test/
+#/src/test/
