@@ -81,4 +81,17 @@ class MemberRepositoryTest {
 
     }
 
+    @Test
+    public void returnType(){
+        Member member1 = new Member("AAA", 10);
+        Member member2 = new Member("AAA", 20);
+        memberRepository.save(member1);
+        memberRepository.save(member2);
+
+        Optional<Member> findMember = memberRepository.findOptionalMemberByUsername("AAA");
+        System.out.println("findMember = " + findMember);
+
+
+    }
+
 }
